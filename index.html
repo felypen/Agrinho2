@@ -9,8 +9,15 @@
 <body>
     <header>
         <h1>Eventos Entre o Campo e a Cidade</h1>
-        <img src="file:///home/aluno/Imagens/Trator-John-Deere-alta-tecnologia-750x430.webp" alt="magem de evento entre o campo e a cidade">
+        <img src="imagem.jpg" alt="Imagem de evento entre o campo e a cidade">
         <p>Acompanhe eventos e atividades que conectam a vida no campo à vida urbana.</p>
+        
+        <!-- Campo de Busca -->
+        <div class="busca">
+            <input type="text" id="buscaEventos" placeholder="Buscar eventos...">
+            <button onclick="filtrarEventos()">Buscar</button>
+        </div>
+        
         <nav>
             <ul>
                 <li><a href="#eventos">Eventos</a></li>
@@ -24,25 +31,43 @@
         <section id="eventos" class="conteudo">
             <h2>Próximos Eventos</h2>
 
-            <article>
-                <h3>Feira de Tecnologia Rural</h3>
+            <article class="evento" data-nome="Feira de Tecnologia Rural">
+                <h3 onclick="mostrarDetalhes(this)">Feira de Tecnologia Rural</h3>
                 <p><strong>Data:</strong> 25 de Junho de 2025</p>
                 <p><strong>Local:</strong> Parque de Exposições de São José, Interior de SP</p>
                 <p>Uma feira de inovação, apresentando as últimas tecnologias no setor agrícola.</p>
+                
+                <!-- Detalhes adicionais ocultos -->
+                <div class="detalhes" style="display:none;">
+                    <p><strong>Descrição completa:</strong> A Feira de Tecnologia Rural trará as mais recentes inovações tecnológicas para a agricultura, com a participação de empresas e startups focadas em soluções sustentáveis.</p>
+                    <p><strong>Atividades:</strong> Demonstração de drones, palestras sobre sustentabilidade e workshops sobre tecnologias agrícolas.</p>
+                </div>
             </article>
 
-            <article>
-                <h3>Festival Agro e Urbano</h3>
+            <article class="evento" data-nome="Festival Agro e Urbano">
+                <h3 onclick="mostrarDetalhes(this)">Festival Agro e Urbano</h3>
                 <p><strong>Data:</strong> 10 de Julho de 2025</p>
                 <p><strong>Local:</strong> Centro Cultural de Campinas</p>
                 <p>Uma mistura de música e gastronomia, unindo o melhor do campo e da cidade.</p>
+                
+                <!-- Detalhes adicionais ocultos -->
+                <div class="detalhes" style="display:none;">
+                    <p><strong>Descrição completa:</strong> O Festival Agro e Urbano é um evento de 3 dias com apresentações de música rural e urbana, além de uma feira gastronômica com produtos orgânicos e típicos de ambas as regiões.</p>
+                    <p><strong>Atividades:</strong> Shows ao vivo, workshops de culinária rural, feira de produtos artesanais e apresentações culturais.</p>
+                </div>
             </article>
 
-            <article>
-                <h3>Palestra sobre Agricultura Sustentável</h3>
+            <article class="evento" data-nome="Palestra sobre Agricultura Sustentável">
+                <h3 onclick="mostrarDetalhes(this)">Palestra sobre Agricultura Sustentável</h3>
                 <p><strong>Data:</strong> 15 de Agosto de 2025</p>
                 <p><strong>Local:</strong> Universidade Estadual de Maringá</p>
                 <p>Especialistas discutem como integrar práticas sustentáveis no campo e na cidade.</p>
+                
+                <!-- Detalhes adicionais ocultos -->
+                <div class="detalhes" style="display:none;">
+                    <p><strong>Descrição completa:</strong> Esta palestra será ministrada por especialistas em agricultura sustentável, abordando temas como o uso de tecnologias limpas no campo e o impacto das práticas agrícolas no meio ambiente.</p>
+                    <p><strong>Atividades:</strong> Discussão sobre novas políticas agrícolas e formas de tornar as cidades mais sustentáveis em termos de abastecimento de alimentos.</p>
+                </div>
             </article>
         </section>
 
@@ -61,5 +86,7 @@
     <footer>
         <p>&copy; 2025 - Todos os direitos reservados</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

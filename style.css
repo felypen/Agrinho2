@@ -60,3 +60,27 @@ footer {
     padding: 10px;
     position: fixed;
     bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header img {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        position: relative;
+    }
+}
